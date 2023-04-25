@@ -89,6 +89,15 @@
       "status": "Reddedildi",
       "type": "Uzaktan",
       "date": "3/28/2023"
+    },
+    {
+      "id": 1682454477038,
+      "position": "dsf",
+      "company": "sdf",
+      "location": "safas",
+      "status": "Mülakat",
+      "type": "Tam Zaman",
+      "date": "4/25/2023"
     }
   ]
 }

@@ -140,4 +140,12 @@ header div {
 }
 .add-sec .inputs .input-field select {
   padding: 5px 10px;
+}
+
+.filter-sec {
+  max-width: 600px;
+  margin: 0px auto;
+}
+.filter-sec button {
+  min-height: 45px;
 }/*# sourceMappingURL=style.css.map */

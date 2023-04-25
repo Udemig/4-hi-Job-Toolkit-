@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setJobs } from '../app/jobSlice';
+import Filter from '../components/filter';
 
 const JobList = () => {
   const state = useSelector((state) => state.jobState);
@@ -14,18 +15,17 @@ const JobList = () => {
       .then((res) => dispatch(setJobs(res.data)));
   }, []);
 
-  console.log(state);
-
   return (
     <>
-      <h3 className="job-count">{state.jobs.length} İş Bulundu</h3>
+      <Filter />
+      <h3 className="job-count">{state.filtredJobs.length} İş Bulundu</h3>
       <section className="list-section">
         {/* eğer veri çekilmemişse loading yaz değilse ekrana bas */}
         {!state.initialized ? (
           <p>Loading</p>
         ) : (
-          state.jobs.map((job) => (
-            <div className="job-card">
+          state.filtredJobs.map((job) => (
+            <div className="job-card" key={job.id}>
               {/* kartın üst kısmı */}
               <div className="head">
                 <div className="letter">
